@@ -1,0 +1,7 @@
+*begin sumpcave
+
+*fix 1 0389255 4709711 884
+*data normal from to tape compass clino
+1	2	 1.00	000.00	00.00	
+*end sumpcave
+

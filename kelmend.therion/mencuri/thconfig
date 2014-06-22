@@ -1,0 +1,26 @@
+encoding  utf-8
+source mencuri.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 200
+  colour map-fg [84 96 96]
+	map-header 0 0 off
+endlayout
+layout images
+	map-image 120 0 sw ../output/mencuri_elev.pdf
+	map-header 0 0 nw
+endlayout
+layout xvi_scale
+	scale 1 200
+endlayout
+
+#export model -o ../output/mencuri.3d
+#export model -o ../output/mencuri.lox
+#export model -o ../output/mencuri.kml
+export map -o ../output/mencuri_map.kml
+#export map -o ../resources/mencuri.xvi -layout xvi_scale
+#export map -o ../resources/mencuri_elev.xvi -proj elevation -layout xvi_scale
+export map -o ../output/mencuri_elev.pdf -proj elevation -layout layout
+select mencuri_plan
+export map -o ../output/mencuri.pdf -layout layout -layout images

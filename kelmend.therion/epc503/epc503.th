@@ -1,0 +1,7 @@
+survey epc503
+	centreline -cs utm34
+		fix 0 0396728 4705867 1943
+		date 2011.09.05
+		1	0	 7.93	190.78	 44.62	
+	endcentreline
+endsurvey

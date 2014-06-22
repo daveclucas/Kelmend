@@ -1,0 +1,25 @@
+encoding  utf-8
+source sumpcave.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 2000
+	scale-bar 200 m
+	map-header 0 0 off
+endlayout
+layout images
+	map-image 0 100 sw ../../output/sumpcave_ext.pdf
+	map-header 0 0 nw
+endlayout
+layout xvi_scale
+	scale 1 1000
+endlayout
+
+export model -o ../../output/sumpcave.3d
+export model -o ../../output/sumpcave.lox
+export model -o ../../output/sumpcave.kml
+export map -o ../output/sumpcave_map.kml
+export map -o ../resources/sumpcave.xvi -layout xvi_scale
+export map -o ../resources/sumpcave_ext.xvi -proj extended -layout xvi_scale
+export map -o ../../output/sumpcave_ext.pdf -proj extended -layout layout
+export map -o ../../output/sumpcave.pdf -layout layout -layout images

@@ -1,0 +1,90 @@
+survey pitkini1
+	centreline
+		date 2010.09.01
+		data normal from to tape compass clino
+		0	1	2.59	266.14	37.08
+		1	2	6.83	298.89	31.27
+		2	3	3.94	1.79	-36.97
+		3	4	3.34	54.04	-13.12
+		4	5	8.45	53.12	-25.75
+		flags splay
+		5	-	 2.93	 14.06	  7.92	
+		5	-	 5.32	194.19	  1.29	
+		5	-	 5.76	 95.59	 -7.53	
+		flags not splay
+		data dimensions station left right up down
+		0	6.78	0.0	0.0	0.0	
+		1	0.41	1.08	0.66	0.81	
+		2	1.85	0.76	3.79	0.0	
+		3	1.21	0.45	0.39	0.0	
+		4	3.21	1.48	2.42	1.17	
+		5	4.56	6.09	2.43	0.0
+	endcentreline
+endsurvey
+
+survey pitkini2
+	centreline
+		date 2010.09.01
+		0	1	 1.47	 77.54	  6.05	
+		1	2	 4.25	308.37	 40.83
+		flags splay	
+		2	-	 0.79	 47.16	 15.25	
+		flags not splay
+		2	3	 2.24	286.19	 29.04	
+		3	4	 3.80	277.49	 21.02	
+		4	5	 4.27	245.96	 33.87	
+		5	6	 2.69	183.13	 15.83	
+		6	7	 1.00	208.88	 14.31	
+		7	8	 2.62	261.23	 45.03
+		flags splay	
+		8	-	 1.77	308.28	 16.94	
+		flags not splay
+		8	9	 3.82	246.52	 22.48	
+		data dimensions station left right up down
+		2	4.65	4.75	1.66	0.0	
+		3	4.78	1.9	0.89	0.0	
+		4	1.74	3.06	0.44	0.25	
+		8	0.74	2.21	0.0	0.0
+	endcentreline
+endsurvey
+
+survey pitkini5
+	centreline -cs UTM34
+		fix 6 0396802 4706512 1810
+		station 6 entrance
+		date 2010.09.01
+		0	1	 8.00	291.43	  2.24	
+		1	2	15.62	276.70	 56.20	
+		2	3	13.34	266.60	 73.09	
+		flags splay
+		3	-	 4.71	179.99	  0.00	
+		flags not splay
+		3	4	 4.71	205.59	 34.90	
+		4	5	17.22	241.61	 83.00	
+		5	6	 6.70	357.50	 90.00	
+		
+		data dimensions station left right up down
+		0	1.0	0.88	0.5	0.5	
+		1	0.58	0.64	2.31	0.51	
+		2	6.54	4.49	22.11	1.5			
+		3	6.54	0.0	9.49	13.42
+	endcentreline
+endsurvey
+
+equate 3@pitkini1 0@pitkini2
+equate 9@pitkini2 0@pitkini5
+
+input pitkini.th2
+join pitkini_s1 pitkini_s2
+
+map pitkini_plan -title "Pitkini Cave, Kelmend, Albania"
+	pitkini_s1
+	pitkini_s2
+	pitkini_s3
+	pitkini_s4
+endmap
+map pitkini_elev -title "Pitkini - Albania<br>Location: 0396802 4706512 UTM34"
+	pitkini_elev_s2
+	break
+	pitkini_elev_s1
+endmap

@@ -1,0 +1,25 @@
+encoding  utf-8
+source madhe_ben.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 200
+	map-header 0 0 off
+  colour map-fg [84 96 96]
+endlayout
+layout images
+	map-image 120 -50 sw ../output/madhe_ben_elev180.pdf
+	map-header 0 0 nw
+endlayout
+layout xvi_scale
+	scale 1 1000
+endlayout
+
+export model -o ../output/madhe_ben.3d
+export model -o ../output/madhe_ben.lox
+export model -o ../output/madhe_ben.kml
+export map -o ../output/madhe_ben_map.kml
+#export map -o ../resources/madhe_ben.xvi -layout xvi_scale
+export map -o ../resources/madhe_ben_elev180.xvi -proj [elevation 180] -layout xvi_scale
+export map -o ../output/madhe_ben_elev180.pdf -proj [elevation 180] -layout layout
+export map -o ../output/madhe_ben.pdf -layout layout -layout water-blue -layout images

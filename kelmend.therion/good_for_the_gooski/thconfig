@@ -1,0 +1,24 @@
+encoding  utf-8
+source good_for_the_gooski.th
+#input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+#	copy common
+	scale 1 5000
+#	rotate 310
+	map-header 0 0 off
+endlayout
+layout images
+	map-image 0 100 sw output/good_for_the_gooski_e50.pdf
+	map-header 0 0 nw
+endlayout
+layout xvi_scale
+	scale 1 400
+endlayout
+
+export model -o output/good_for_the_gooski.3d
+export model -o ../output/good_for_the_gooski.lox
+export model -o ../output/good_for_the_gooski.kml
+export map -o resources/good_for_the_gooski.xvi -layout xvi_scale
+export map -o resources/good_for_the_gooski_e50.xvi -proj [elevation 50] -layout xvi_scale
+export map -o ../output/good_for_the_gooski_e50.pdf -proj [elevation 50] -layout layout
+export map -o ../output/good_for_the_gooski.pdf -layout layout #-layout images

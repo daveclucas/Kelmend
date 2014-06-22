@@ -1,0 +1,29 @@
+encoding  utf-8
+source vaso.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 500
+	symbol-show point station
+	rotate 320
+	map-header 0 0 off
+	statistics explo all
+endlayout
+layout images
+	map-image 0 110 sw ../output/vaso_e40.pdf
+	map-header 0 0 nw
+endlayout
+layout xvi_scale
+	scale 1 200
+endlayout
+
+export model -o ../output/vaso.3d
+export model -o ../output/vaso.lox
+export model -o ../output/vaso.kml
+export map -o ../output/vaso_map.kml
+#export map -o ../resources/vaso.xvi -layout xvi_scale
+#export map -o ../resources/vaso_e40.xvi -proj [elevation 40] -layout xvi_scale
+select vaso_elevation40
+export map -o ../output/vaso_e40.pdf -proj [elevation 40] -layout layout
+select vaso_plan
+export map -o ../output/vaso.pdf -layout layout -layout images

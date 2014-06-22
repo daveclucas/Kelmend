@@ -1,0 +1,15 @@
+set xth(ctrl,cp,datlist) {}
+xth_cp_data_tree_insert 1 {} 0   "" "" "length: 884.55m (surface 20.00m, duplicated 0.00m)\nvertical range: 448.53m (from ENT@madhe_ben at 1862.00m to 28@madhe_ben_end at 1413.47m)\nnorth-south range: 130.69m (from 39@2_13-09 at 4706156.84m to 48@madhe_ben at 4706026.15m)\neast-west range: 91.33m (from 50@madhe_ben at 396696.33m to 0@madhe_ben at 396605.00m)\nnumber of shots: 215\nnumber of stations: 219"
+xth_cp_data_tree_insert 18 1 1 madhe_ben madhe_ben "" "" "length: 460.67m (surface 20.00m, duplicated 0.00m)\nvertical range: 342.45m (from ENT@madhe_ben at 1862.00m to 74@madhe_ben at 1519.55m)\nnorth-south range: 72.12m (from ENT@madhe_ben at 4706098.27m to 48@madhe_ben at 4706026.15m)\neast-west range: 91.33m (from 50@madhe_ben at 396696.33m to 0@madhe_ben at 396605.00m)\nnumber of shots: 107\nnumber of stations: 109"
+xth_cp_data_tree_insert 22 1 1 a a "" "" "length: 26.89m (surface 0.00m, duplicated 0.00m)\nvertical range: 19.59m (from 34@a at 1711.67m to 37@a at 1692.08m)\nnorth-south range: 8.18m (from 35@a at 4706071.82m to 37@a at 4706063.64m)\neast-west range: 12.78m (from 37@a at 396667.17m to 34@a at 396654.39m)\nnumber of shots: 5\nnumber of stations: 6"
+xth_cp_data_tree_insert 26 1 1 madhe_ben_end madhe_ben_end "" "" "length: 164.37m (surface 0.00m, duplicated 0.00m)\nvertical range: 107.36m (from 1@madhe_ben_end at 1520.82m to 28@madhe_ben_end at 1413.47m)\nnorth-south range: 27.57m (from 19@madhe_ben_end at 4706117.57m to 1@madhe_ben_end at 4706090.01m)\neast-west range: 20.36m (from 15@madhe_ben_end at 396694.71m to 3@madhe_ben_end at 396674.35m)\nnumber of shots: 54\nnumber of stations: 55"
+xth_cp_data_tree_insert 30 1 1 2_13-09 2_13-09 "" "" "length: 232.62m (surface 0.00m, duplicated 0.00m)\nvertical range: 105.91m (from 1@2_13-09 at 1523.24m to 39@2_13-09 at 1417.33m)\nnorth-south range: 65.68m (from 39@2_13-09 at 4706156.84m to 1@2_13-09 at 4706091.16m)\neast-west range: 70.51m (from 8@2_13-09 at 396693.04m to 39@2_13-09 at 396622.53m)\nnumber of shots: 49\nnumber of stations: 49"
+xth_cp_data_tree_create
+set xth(ctrl,cp,maplist) {}
+xth_cp_map_tree_insert projection 0 p1 {} 0 plan {} {} {}
+xth_cp_map_tree_insert projection 0 p2 {} 0 elevation {} {} {}
+xth_cp_map_tree_create
+xth_cp_comp_stat 885 6
+set xth(th_exit_state) 2
+set xth(th_exit_number) 1389894950
+

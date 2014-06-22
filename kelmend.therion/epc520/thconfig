@@ -1,0 +1,24 @@
+encoding  utf-8
+source epc520.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 2000
+	scale-bar 200 m
+	rotate 60
+endlayout
+layout images
+	map-image 0 100 sw output/epc520_ext.pdf
+endlayout
+layout xvi_scale
+	scale 1 1000
+endlayout
+
+export model -o ../output/epc520.3d
+export model -o ../output/epc520.lox
+export model -o ../output/epc520.kml
+export map -o ../output/epc520_map.kml
+#export map -o ../resources/epc520.xvi -layout xvi_scale
+#export map -o ../resources/epc520_ext.xvi -proj extended -layout xvi_scale
+#export map -o ../output/epc520_ext.pdf -proj extended -layout layout
+#export map -o ../output/epc520.pdf -layout layout -layout images

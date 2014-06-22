@@ -1,0 +1,14 @@
+encoding  utf-8
+##XTHERION## xth_me_area_adjust -128.0 -128.0 2933.1182 4972.48828
+##XTHERION## xth_me_area_zoom_to 100
+##XTHERION## xth_me_image_insert {894.893 1 1.0} {373.2199999999999 15@good_for_the_gooski} ../resources/good_for_the_gooski.xvi 0 {}
+##XTHERION## xth_me_image_insert {1947.88 1 1.0} {4052.65 15@good_for_the_gooski} ../resources/good_for_the_gooski_e50.xvi 0 {}
+##XTHERION## xth_me_image_insert {0 1 1.0} {1000 {}} ../resources/4_Good_For_The_Gooski_Plan_2010.png 0 {}
+
+
+
+scrap good_for_the_gooski_s1 -projection plan -scale [15.0 4207.0 506.0 4207.0 0.0 0.0 25 0.0 m]
+
+endscrap
+
+

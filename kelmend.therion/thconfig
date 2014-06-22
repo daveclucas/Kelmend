@@ -1,0 +1,18 @@
+encoding  utf-8
+source kelmend.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 2000
+	scale-bar 200 m
+	rotate 60
+endlayout
+
+#export model -o output/kelmend.3d
+#export model -o output/kelmend.lox
+#export model -o output/kelmend.kml
+export map -o output/kelmend_map.kml
+#export map -o resources/kelmend.xvi -layout xvi_scale
+#export map -o resources/kelmend_ext.xvi -proj extended -layout xvi_scale
+#export map -o output/kelmend_ext.pdf -proj extended -layout layout
+#export map -o output/kelmend.pdf -layout layout -layout images

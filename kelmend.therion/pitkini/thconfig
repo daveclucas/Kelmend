@@ -1,0 +1,27 @@
+encoding  utf-8
+source pitkini.th
+input /Users/daveclucas/Documents/caving/surveys/common_layout.th
+layout layout
+	copy common
+	scale 1 100
+	colour map-fg [84 96 96]
+	map-header 100 100 ne
+endlayout
+layout images
+	map-image 0 100 sw ../output/pitkini_elev.pdf
+	map-header 0 150 off
+endlayout
+layout xvi_scale
+	scale 1 200
+endlayout
+
+export model -o ../output/pitkini.3d
+export model -o ../output/pitkini.lox
+export model -o ../output/pitkini.kml
+export map -o ../output/pitkini_map.kml
+export map -o ../resources/pitkini.xvi -layout xvi_scale
+export map -o ../resources/pitkini_elev.xvi -proj elevation -layout xvi_scale
+select pitkini_elev
+export map -o ../output/pitkini_elev.pdf -proj elevation -layout layout
+select pitkini_plan
+export map -o ../output/pitkini.pdf -layout layout -layout images

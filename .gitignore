@@ -3,3 +3,4 @@
 *.xvi
 .DS_Store
 xtherion.dat
+*.err
